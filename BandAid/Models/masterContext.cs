@@ -34,7 +34,7 @@ namespace BandAid.Models
         {
             modelBuilder.Entity<Event>(entity =>
             {
-                entity.Property(e => e.EventId).ValueGeneratedNever();
+                entity.Property(e => e.EventId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Adress)
                     .HasMaxLength(254)
@@ -70,12 +70,12 @@ namespace BandAid.Models
 
             modelBuilder.Entity<Review>(entity =>
             {
-                entity.Property(e => e.ReviewId).ValueGeneratedNever();
+                entity.Property(e => e.ReviewId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Date).HasColumnType("datetime");
 
                 entity.Property(e => e.Description)
-                    .IsRequired()
+                    
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.User)
@@ -86,7 +86,7 @@ namespace BandAid.Models
 
             modelBuilder.Entity<Status>(entity =>
             {
-                entity.Property(e => e.StatusId).ValueGeneratedNever();
+                entity.Property(e => e.StatusId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -96,15 +96,14 @@ namespace BandAid.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.Property(e => e.UserId).ValueGeneratedNever();
+                entity.Property(e => e.UserId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Adress)
-                    .IsRequired()
                     .HasMaxLength(254)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Description)
-                    .IsRequired()
+                    
                     .IsUnicode(false);
 
                 entity.Property(e => e.Email)
@@ -120,7 +119,7 @@ namespace BandAid.Models
                 entity.Property(e => e.PassHash).IsRequired();
 
                 entity.Property(e => e.ProfileImg)
-                    .IsRequired()
+                    
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.Role)
@@ -133,7 +132,7 @@ namespace BandAid.Models
             {
                 entity.HasKey(e => e.RoleId);
 
-                entity.Property(e => e.RoleId).ValueGeneratedNever();
+                entity.Property(e => e.RoleId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Name)
                     .IsRequired()
