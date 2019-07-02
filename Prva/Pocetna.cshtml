@@ -1,0 +1,225 @@
+﻿
+@{
+    Layout = null;
+}
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+<style>
+
+
+    html {
+        scroll-behavior: smooth;
+        background-size: cover;
+    }
+
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    h1 {
+        opacity: 0.8;
+        color: #aaa69d;
+        position: relative;
+        font-size: 80px;
+        top: 200px;
+        left: 610px;
+    }
+
+    #forma {
+        border-radius: 18px;
+        background: #DCDCDC;
+        padding: 20px;
+        width: 230px;
+        height: 235px;
+        position: relative;
+        left: 650px;
+        top: 323px;
+        border: 5px solid gray;
+    }
+
+    /* gumb za formu prijave */
+    .gumb {
+        position: relative;
+        left: 693px;
+        top: 350px;
+        border: 1px solid white;
+        padding: 10px 39px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .gumb1 {
+        opacity: 0.9;
+        background-color: #3c6382;
+        color: white;
+    }
+
+        .gumb1:hover {
+            background-color: white;
+            color: #0a0a0a;
+        }
+
+/* gumb za pomak dolje */
+    .gumb-dolje {
+        opacity: 1;
+        -webkit-transition: all .5s ease-in 3s;
+        transition: all .5s ease-in 3s;
+    }
+
+    .gumb-dolje {
+        top: 400px;
+        position: relative;
+        left: 740px;
+        display: block;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #0a0a0a;
+        background-size: 14px auto;
+        border-radius: 50%;
+        z-index: 2;
+        -webkit-animation: bounce 2s infinite 2s;
+        animation: bounce 2s infinite 2s;
+        -webkit-transition: all .2s ease-in;
+        transition: all .2s ease-in;
+        transform: scale(1)
+    }
+
+        .gumb-dolje:before {
+            position: absolute;
+            top: calc(50% - 8px);
+            left: calc(50% - 6px);
+            transform: rotate(-45deg);
+            display: block;
+            width: 12px;
+            height: 12px;
+            content: "";
+            border: 2px solid black;
+            border-width: 0px 0 2px 2px;
+        }
+
+    @@keyframes bounce {
+        0%, 100%, 20%, 50%, 80% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        40% {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+        }
+
+        60% {
+            -webkit-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+        }
+    }
+
+    #ok {
+        position: relative;
+        top: 634px;
+        background-color: #555;
+    }
+
+    #p1 {
+        color: white;
+        font-family: arial;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        left: 12px;
+    }
+
+    #p2 {
+        color: white;
+        font-family: arial;
+        display: table-cell;
+        text-align: center;
+        position:relative;
+        left:12px;
+        top:-22px;
+        vertical-align: middle;
+    }
+  
+</style>
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Pocetna</title>
+</head>
+<body  style='background:#80ced6'>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+        <img width="42" height="42" src="~/Models/slike/nota.png" /> <img />
+
+    </nav>
+
+
+    <h1>NAZIV STRANICE </h1>
+
+
+    <form id="forma">
+        <p>PRIJAVA</p>
+
+        <hr />
+        <input type="text" name="korisnicko ime " placeholder=" pero.peric@mev.hr ">
+        <br />
+
+        <hr />
+        <input type="password" name="lozinka" placeholder="lozinka " id="myInput">
+        <input type="checkbox" onclick="myFunction()">Prikazi zaporku
+
+    </form>
+
+    <div id="naziv">
+        <button class="gumb gumb1">Prijava</button>
+    </div>
+
+    <a href="#ok" class="gumb-dolje" address="true"></a>
+
+
+    <div id="ok">
+        <hr />
+        <p id="p1"> O nama !</p>
+        <hr />
+        <br />
+        
+        <p id="p2"> Registracija</p>
+        
+    </div>
+
+
+</body>
+</html>
