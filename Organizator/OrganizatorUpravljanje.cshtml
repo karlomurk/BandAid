@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<style>
+
+
+
+    div {
+        position: relative;
+        top: 200px;
+        left: 123px;
+        height: 300px;
+        width: 50%;
+        background-color: powderblue;
+    }
+
+    #jedan {
+        position:relative;
+        left:325px;
+    }
+    
+</style>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <title>OrganizatorUpravljanje</title>
+</head>
+<body>
+
+
+
+
+    <nav class="navbar navbar-inverse">
+
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+
+        <p class="navbar-text">EVENTS</p>
+        <button type="button" class="btn btn-s navbar-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="glyphicon glyphicon-plus"></i>ADD</button>
+        <ul class="nav navbar-nav navbar-right">
+            <p class="navbar-text">FullName</p>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE OPTION <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="glyphicon glyphicon-edit"></i> Edit</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-cog"></i> MenageEvent</a></li>
+                    <li> <a href="#"><i class="glyphicon glyphicon-log-out"></i> LogOut</a> </li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <div class="btn-group">
+            <p> Event name</p>// ili moze biti link
+            <br />
+            <hr />
+            <p> genre</p>// ili moze biti link
+            <hr />
+            <button type="button" class="btn btn-primary " id="jedan"> <i class="glyphicon glyphicon-remove"></i>  </button>
+            <button type="button" class="btn btn-primary  "> <i class="glyphicon glyphicon-edit "></i> </button>
+        </div>
+
+
+
+    </form>
+</body>
+</html>
